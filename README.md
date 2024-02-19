@@ -25,6 +25,7 @@ In order to follow along in the workshop walk through the following sequence of 
 
 1. Access the AWS account using the link below and add the access code next to the equal sign. Use the access code provided by the workshop hosts.
    Link: https://catalog.us-east-1.prod.workshops.aws/join?access-code=
+2. Follow the requested steps until you can access the AWS account.
 3. Make sure the region on the top right corner of the AWS console says Oregon.
 2. Type in "Bedrock" into the search bar and click on Bedrock to access the service console.
 3. Click on "Model Access" on the bottom left corner and then click on "Manage model access" on the top right corner of the AWS Console.
