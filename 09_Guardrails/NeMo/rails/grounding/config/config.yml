@@ -21,23 +21,3 @@ models:
     engine: amazon_bedrock
     model: anthropic.claude-v2
     streaming: True
-      
-#core:
-#  embedding_search_provider:
-#    name: amazon_bedrock_embedding
-#    parameters:
-#      embedding_engine: amazon_bedrock
-#      embedding_model: amazon.titan-embed-text-v1
-      
-# Output rails are triggered after a bot message has been generated.
-#rails:
-#  output:
-#    flows:
-#      - self check facts
-
-#knowledge_base:
-  #embedding_search_provider:
-    #name: amazon_bedrock_embedding
-    #parameters:
-      #embedding_engine: amazon_bedrock
-      #embedding_model: amazon.titan-embed-text-v1
