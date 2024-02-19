@@ -12,14 +12,34 @@ Labs include:
 
 <div align="center">
 
-![imgs/11-overview](imgs/11-overview.png "Overview of the different labs in the workshop")
+![imgs/11-overview](09_Guardrails/images/w_highlvl_guardrails_architecture.png)
 
 </div>
 
-You can also refer to these [Step-by-step guided instructions on the workshop website](https://catalog.us-east-1.prod.workshops.aws/workshops/a4bdb007-5600-4368-81c5-ff5b4154f518/en-US).
+The original Amazon Bedrock Workshop upon which this Workshop is based on can be found here [Original Amazon Bedrock Workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/a4bdb007-5600-4368-81c5-ff5b4154f518/en-US).
 
 
 ## Getting started
+
+In order to follow along in the workshop walk through the following sequence of steps:
+
+1. Access the AWS account using the Link and replace the access code with the one shared by the workshop hosts: Link: https://catalog.us-east-1.prod.workshops.aws/join?access-code=<insert code here>
+2. Make sure the region on the top right corner of the AWS console says Oregon.
+2. Type in "Bedrock" into the search bar and click on Bedrock to access the service console.
+3. Click on "Model Access" on the bottom left corner and then click on "Manage model access" on the top right corner of the AWS Console.
+4. Select all models from Amazon + all models from Anthropic and click on save "save changes". Once the permissions have been approved (2-3 min) your screen should reflect the following:
+
+<div align="center">
+
+![imgs/bedrock-enaled-models](09_Guardrails/images/bedrock-enabled-models.png)
+
+</div>
+
+5. Type in "SageMaker" into the search abr and click on SageMaker to access the service console.
+6. Click on "Studio" on the top left and then Open Studio on the top right of the AWS console.
+7. Click on "Studio Classic" and then click on "Open" to access the SageMaker Studio Environment where you can run your python notebooks.
+8. Click on "Version Control Icon" on the top left and select clone repository. Insert the GitHub repository (https://github.com/gabriel-rodriguez-garcia/genai_guardrails_deep_dive_days.git) and clone.
+9. You are ready to go !
 
 ### Choose a notebook environment
 
