@@ -23,11 +23,12 @@ The original Amazon Bedrock Workshop upon which this Workshop is based on can be
 
 In order to follow along in the workshop walk through the following sequence of steps:
 
-1. Access the AWS account using the Link and replace the access code with the one shared by the workshop hosts: Link: https://catalog.us-east-1.prod.workshops.aws/join?access-code=<insert code here>
-2. Make sure the region on the top right corner of the AWS console says Oregon.
+1. Access the AWS account using the Link below and replace the access code with the one shared by the workshop hosts.
+   Link: https://catalog.us-east-1.prod.workshops.aws/join?access-code=<insert code here>
+3. Make sure the region on the top right corner of the AWS console says Oregon.
 2. Type in "Bedrock" into the search bar and click on Bedrock to access the service console.
 3. Click on "Model Access" on the bottom left corner and then click on "Manage model access" on the top right corner of the AWS Console.
-4. Select all models from Amazon + all models from Anthropic and click on save "save changes". Once the permissions have been approved (2-3 min) your screen should reflect the following:
+4. Select all models from Amazon + all models from Anthropic and click on "save changes". Once the permissions have been approved (2-3 min) your screen should reflect the following state:
 
 <div align="center">
 
@@ -35,11 +36,11 @@ In order to follow along in the workshop walk through the following sequence of 
 
 </div>
 
-5. Type in "SageMaker" into the search abr and click on SageMaker to access the service console.
-6. Click on "Studio" on the top left and then Open Studio on the top right of the AWS console.
-7. Click on "Studio Classic" and then click on "Open" to access the SageMaker Studio Environment where you can run your python notebooks.
-8. Click on "Version Control Icon" on the top left and select clone repository. Insert the GitHub repository (https://github.com/gabriel-rodriguez-garcia/genai_guardrails_deep_dive_days.git) and clone.
-9. You are ready to go !
+5. Type in "SageMaker" into the search bar and click on SageMaker to access the service console.
+6. Click on "Studio" on the top left and then "Open Studio" on the top right of the AWS console.
+7. Click on "Studio Classic" and then click on "Open" to access the SageMaker Studio Environment where you can run your python notebooks. This step can take a few minutes until your instances have been provisioned.
+8. Click on the version control icon on the top left and select "Clone a repository". Insert the GitHub repository (https://github.com/gabriel-rodriguez-garcia/genai_guardrails_deep_dive_days.git) and click on clone. Alternatively you can open a terminal and clone the repo using standard git comands.
+9. You are all set and ready to apply some GenAI guardrails !
 
 ### Choose a notebook environment
 
