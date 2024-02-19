@@ -14,8 +14,6 @@ def init(app: LLMRails):
     from models import (
         BedrockModels,
         BedrockEmbeddingsIndex,
-        bedrock_output_moderation,
-        bedrock_check_jailbreak,
         bedrock_v2_parser,
         bedrock_claude_v2_parser
     )
@@ -35,6 +33,7 @@ def init(app: LLMRails):
     # For quick reference, the complete interface is included below:
     # https://github.com/NVIDIA/NeMo-Guardrails/blob/main/docs/user_guide/advanced/embedding-search-providers.md
     # Custom LLM Provider
+    
     bedrock_models = BedrockModels
     llm_wrapper = get_llm_instance_wrapper(
         llm_instance=bedrock_models.llm, llm_type="bedrock_llm"

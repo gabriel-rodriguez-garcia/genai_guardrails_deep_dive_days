@@ -1,4 +1,3 @@
-# Prompts
 prompts:
   - task: generate_user_intent
     models:
@@ -7,7 +6,7 @@ prompts:
       - type: system
         content: |-
           """
-          {{ general_instruction }}
+          {{ general_instructions }}
           Your task is to generate a short summary called user intent for the last user message in a conversation.
           """
 
@@ -31,7 +30,7 @@ prompts:
       - type: system
         content: |-
           """
-          {{ general_instruction }}
+          {{ general_instructions }}
           Your task is to generate a short summary called user intent for the last user message in a conversation.
           """
 
@@ -46,20 +45,42 @@ prompts:
 
     output_parser: "verbose_v1"
 
+
+    # Prompt for generating the bot message from a canonical form.
   - task: generate_bot_message
     models:
-      - amazon_bedrock/anthropic.claude-v2
-    messages:
-      - type: system
-        content: |-
-          
-          {{ general_instruction | to_messages}}
-          
-          {% if relevant_chunks %}
-          # use this text as context to answer the user's question:
-          {{ relevant_chunks | to_messages}}
-          {% endif %}"
+      - amazon_bedrock/anthropic
+    content: |-
+      {{ general_instruction.strip() }}
+      Current date: {{ current_date }}
 
-          {{ history | colang | last_turns(1) | bedrock_claude_v2 }} 
+      This is how a conversation between a user and the bot can go:
+      <sample_conversation>
+      {{ sample_conversation.strip() }}
+      </sample_conversation>
+
+      {% if relevant_chunks %}
+      This is some additional context:
+      ```markdown
+      {{ relevant_chunks }}
+      ```
+      {% endif %}
+
+      This is how the bot talks:
+      <examples>
+      {{ examples.strip() }}
+      </examples>
+
+      This is the current conversation between the user and the bot:
+      <current_conversation>
+      {{ sample_conversation.strip() | first_turns(2) }}
+      {{ history | colang }}
+      </current_conversation>
+
+      Use the sample conversation, examples, and current conversation to write a reply for the bot.
+      Make sure to pay close attention to the canonical form for what the bot should say (if applicable)!
+      Only write the reply for the bot, and nothing else. Do not write the canonical form.
+
+      Assistant: 
 
     output_parser: "verbose_v1"

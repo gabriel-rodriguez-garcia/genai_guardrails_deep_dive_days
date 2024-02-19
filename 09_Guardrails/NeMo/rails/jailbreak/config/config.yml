@@ -31,6 +31,7 @@ models:
   - type: main
     engine: amazon_bedrock
     model: anthropic.claude-v2
+    streaming: True
 
 core:
   embedding_search_provider:

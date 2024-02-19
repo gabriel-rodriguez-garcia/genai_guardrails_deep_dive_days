@@ -27,8 +27,8 @@ def init(app: LLMRails):
     app.register_filter(bedrock_claude_v2_parser, name="bedrock_claude_v2")
 
     # Custom Actions
-    app.register_action(bedrock_check_jailbreak, name="bedrock_check_jailbreak")
-    app.register_action(bedrock_output_moderation, name="bedrock_output_moderation")
+    #app.register_action(bedrock_check_jailbreak, name="bedrock_check_jailbreak")
+    #app.register_action(bedrock_output_moderation, name="bedrock_output_moderation")
 
     # Custom Embedding Search Providers
     # You can implement your own custom embedding search provider by subclassing EmbeddingsIndex.

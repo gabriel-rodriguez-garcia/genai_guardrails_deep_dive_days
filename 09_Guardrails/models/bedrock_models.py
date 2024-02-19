@@ -68,6 +68,7 @@ class BedrockClientSingleton:
             model_id=self._model_id,
             client=self._bedrock_client,
             model_kwargs=model_parameter,
+            streaming=True
         )
 
     def get_embeddings(self, embeddings_model_id: str):

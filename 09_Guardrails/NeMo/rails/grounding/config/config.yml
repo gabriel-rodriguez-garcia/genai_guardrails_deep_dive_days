@@ -1,18 +1,43 @@
+instructions:
+  - type: general
+    content: |
+      Below is a conversation between a user and a bot called the ABC Bot.
+      The bot is designed to answer employee questions about the ABC Company.
+      The bot is knowledgeable about the employee handbook and company policies.
+      If the bot does not know the answer to a question, it truthfully says it does not know.
+
+sample_conversation: |
+  user "Hi there. Can you help me with some questions I have about the company?"
+    express greeting and ask for assistance
+  bot express greeting and confirm and offer assistance
+    "Hi there! I'm here to help answer any questions you may have about the ABC Company. What would you like to know?"
+  user "What are the companies employee benefits?"
+    ask question about benefits
+  bot respond to question about benefits
+    "The ABC Company provides comprehensive employee benefits including health insurance, retirement savings plans, paid time off, an employee assistance program, stock options, professional development opportunities, and a wellness program to support the holistic well-being and growth of its employees."
+
 models:
   - type: main
     engine: amazon_bedrock
     model: anthropic.claude-v2
+    streaming: True
+      
+#core:
+#  embedding_search_provider:
+#    name: amazon_bedrock_embedding
+#    parameters:
+#      embedding_engine: amazon_bedrock
+#      embedding_model: amazon.titan-embed-text-v1
+      
+# Output rails are triggered after a bot message has been generated.
+#rails:
+#  output:
+#    flows:
+#      - self check facts
 
-core:
-  embedding_search_provider:
-    name: amazon_bedrock_embedding
-    parameters:
-      embedding_engine: amazon_bedrock
-      embedding_model: amazon.titan-embed-text-v1
-
-knowledge_base:
-  embedding_search_provider:
-    name: amazon_bedrock_embedding
-    parameters:
-      embedding_engine: amazon_bedrock
-      embedding_model: amazon.titan-embed-text-v1
+#knowledge_base:
+  #embedding_search_provider:
+    #name: amazon_bedrock_embedding
+    #parameters:
+      #embedding_engine: amazon_bedrock
+      #embedding_model: amazon.titan-embed-text-v1
