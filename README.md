@@ -21,7 +21,7 @@ The original Amazon Bedrock Workshop upon which this Workshop is based on can be
 
 ## Getting started
 
-In order to follow along in the workshop walk through the following sequence of steps:
+In order to follow along in the workshop complete the following sequence of steps:
 
 1. Access the AWS account using the link below and add the access code next to the equal sign. Use the access code provided by the workshop hosts.
    Link: https://catalog.us-east-1.prod.workshops.aws/join?access-code=
