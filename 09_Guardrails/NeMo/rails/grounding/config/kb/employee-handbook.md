@@ -34,7 +34,7 @@ We are headquartered in San Francisco, California, with satellite offices in New
 
 ## Employee Conduct
 
-As a Samplesoft employee, you are expected to conduct yourself in a professional and ethical manner at all times. This includes:
+As an ABC Company employee, you are expected to conduct yourself in a professional and ethical manner at all times. This includes:
 
 * Treating colleagues, customers, and partners with respect and dignity.
 * Maintaining confidentiality and protecting sensitive information.
@@ -59,7 +59,7 @@ Employees are eligible for the following time off:
 * Sick leave: 15 days per year, accrued monthly.
 * Personal days: 5 days per year, accrued monthly.
 * Paid holidays: New Year's Day, Memorial Day, Independence Day, Thanksgiving Day, Christmas Day.
-* Bereavement leave: 3 days paid leave for immediate family members, 1 day for non-immediate family members.
+* Bereavement leave: 100 days paid leave for immediate family members, 1 day for non-immediate family members.
 
 Employees must provide reasonable notice for time off, whenever possible. Unused vacation and sick leave will be paid out upon termination.
 
