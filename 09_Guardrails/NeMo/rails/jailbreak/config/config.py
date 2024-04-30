@@ -39,6 +39,7 @@ def init(app: LLMRails):
     llm_wrapper = get_llm_instance_wrapper(
         llm_instance=bedrock_models.llm, llm_type="bedrock_llm"
     )
+    
     register_llm_provider("amazon_bedrock", llm_wrapper)
     bedrock_models.get_embeddings(embeddings_model_id="amazon.titan-embed-text-v1")
     app.register_embedding_search_provider("amazon_bedrock_embedding", BedrockEmbeddingsIndex)

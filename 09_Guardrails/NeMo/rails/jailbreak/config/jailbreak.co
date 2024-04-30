@@ -21,12 +21,10 @@ define bot inform cannot answer question
     "The jailbreak guardrails got ya, I will not answer this question"
 
 define extension flow check jailbreak
-  """We set the priority to 2 as we want this to have priority over normal flows, following the NeMo documentation and examples."""
-  priority 2
 
   user ...
-  $allowed = execute bedrock_check_jailbreak()
+  $prohibited = execute bedrock_check_jailbreak()
 
-  if not $allowed
+  if $prohibited
     bot inform cannot answer question
     stop
