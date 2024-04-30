@@ -21,7 +21,7 @@ The original Amazon Bedrock Workshop upon which this Workshop is based on can be
 
 ## Getting started
 
-In order to follow along in the workshop complete the following sequence of steps:
+In order to follow along in the workshop complete the following sequence of steps using instructions below or watching the following videos [Part 1 - Access AWS Account](https://drive.google.com/file/d/16EkrdoxQ96zpdzOd1zK0Gd53iqmNV3ds/view?usp=sharing) and [Part 2 - Setup Bedrock and SageMaker](https://drive.google.com/file/d/1AYCcYp1iN4j16GhxHOqJo-863doVnb-e/view?usp=sharing):
 
 1. Access the AWS account using the link below and add the access code next to the equal sign. Use the access code provided by the workshop hosts.
    Link: https://catalog.us-east-1.prod.workshops.aws/join?access-code=
