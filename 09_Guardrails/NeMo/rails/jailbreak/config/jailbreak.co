@@ -22,6 +22,8 @@ define bot inform cannot answer question
 
 define extension flow check jailbreak
 
+  priority 2
+
   user ...
   $prohibited = execute bedrock_check_jailbreak()
 
