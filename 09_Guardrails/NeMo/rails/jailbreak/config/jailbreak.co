@@ -21,7 +21,7 @@ define bot inform cannot answer question
     "The jailbreak guardrails got ya, I will not answer this question"
 
 define extension flow check jailbreak
-
+  """ We set priority 2 to ensure this flow has priority over standard flows according to the nemoguardrails docs"""
   priority 2
 
   user ...
