@@ -29,8 +29,9 @@ async def bedrock_check_jailbreak(
 
     user_input = context.get("last_user_message")
 
-    """Checks if the user ask is malicious and should be blocked."""
-    prompt = """    <add a prompt here that asks the LLM if the input is malicious or not. Ask the model to only reply with yes/no where yes stands for malicious.>
+    # Task 2.1: Define the prompt content as described below.
+    # Start with a simple prompt and extend it until you get the desired output
+    prompt = """    <add a prompt here that asks the LLM if the input is malicious or not.>
 
                     {query}
                     """.format(
@@ -42,26 +43,11 @@ async def bedrock_check_jailbreak(
 
     print("response from evaluator LLM", res)
 
-    # if the model responds with yes, then we can assume its malicious
-    condition_1 = res.lower() in [
-        "true",
-        "1",
-        "t",
-        "y",
-        "yes",
-        "yes.",
-        "yeah",
-        "yup",
-        "certainly",
-        "uh-huh",
-        "affirm",
-    ]
+    # Task 2.2 Based on the response that you get from the LLM return a True if the evaluator LLM thinks it is indeed malicious and a False if it is not malicious.
+    # Think about how you can easily convert the answer to the output boolean value.
+    # Check what the model responds based on different input that you provide and then add the code to translate the response to True or False
 
-    # if the model apologizes because it doesn't want to respond we treat it as a malicious too
-    condition_2 = "apologize" in res.lower()
-    prohibited = condition_1 or condition_2
-
-    return prohibited
+    return None
 
 
 @action()
