@@ -41,11 +41,11 @@ async def bedrock_check_jailbreak(
     bbm = BedrockModels
     res = bbm.llm.invoke(prompt)
 
-    print("response from evaluator LLM", res)
+    print("response from evaluator LLM:", res, "\n")
 
     # Task 2.2 Based on the response that you get from the LLM return a True if the evaluator LLM thinks it is indeed malicious and a False if it is not malicious.
     # Think about how you can easily convert the answer to the output boolean value.
-    # Check what the model responds based on different input that you provide and then add the code to translate the response to True or False
+    # Check what the model answers based on different input that you provide and then add the code to translate the response to True or False.
 
     return None
 

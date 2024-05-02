@@ -26,10 +26,12 @@ async def bedrock_check_jailbreak(
                     """.format(query=user_input)
     bbm = BedrockModels
     res = bbm.llm.invoke(prompt)
-    print("response from llm", res)
+    print("response from evaluator LLM:", res, "\n")
     
-    condition_1 = res.lower() in ['true', '1', 't', 'y', 'yes', 'yes.', 'yeah', 'yup', 'certainly', 'uh-huh', 'affirm']
+    affirming_word_list = ['true', '1', 't', 'y', 'yes', 'yes.', 'yeah', 'yup', 'certainly', 'uh-huh', 'affirm']
+    condition_1 = len([word for word in affirming_word_list if word in res.lower()])>0
     condition_2 = "apologize" in res.lower()
+ 
     prohibited = condition_1 or condition_2
     
     return prohibited
